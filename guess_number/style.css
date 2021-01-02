@@ -82,6 +82,7 @@ main {
 }
 
 .left {
+  margin-left: 50px;
   display: flex;
   flex-direction: column;
   float: left;
@@ -89,6 +90,7 @@ main {
 }
 
 .right {
+  margin-right: 50px;
   font-size: 2rem;
   float: right;
   right: 100px;
