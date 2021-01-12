@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CodingChallenge 2</title>
+  </head>
+  <body>
+    <h1>Decide the Winner</h1>
+
+    <h4>First Team Score</h4>
+    <div class="teamA">
+      <input type="text" name="scoreOne" class="scoreOneA">
+      <input type="text" name="scoreTwo" class="scoreTwoA">
+      <input type="text" name="scoreThree" class="scoreThreeA">
+      <p>The average is: <span id="scoreFirst"></span></p>
+    </div>
+
+    <div class="teamB">
+      <h4>Second Team Score</h4>
+      <input type="text" name="scoreOne" class="scoreOneB">
+      <input type="text" name="scoreTwo" class="scoreTwoB">
+      <input type="text" name="scoreThree" class="scoreThreeB">
+      <p>The average is: <span id="scoreSecond"></span></p>
+    </div>
+    <br>
+    <button type="button" name="teams" onclick="winnerCompute()">Compute Result</button>
+
+    <div class="display">
+      <h3>The Winner is:</h3><span id="team"> </span>
+      <p>With an average score of: <span id="result"> </span></p>
+    </div>
+
+    <script type="text/javascript" src="decideWinner.js">
+
+    </script>
+  </body>
+</html>

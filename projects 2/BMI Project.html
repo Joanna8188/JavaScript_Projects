@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Coding Challenge 1</title>
+  </head>
+  <body>
+    <h1>Compute Mark and John BMI</h1>
+    <form action="/" method="post">
+      <p>Input Mark's Mass and Height</p>
+      <input type="text" name="markMass" id="markMass" placeholder="in kilogram">
+      <input type="text" name="markHeight" id="markHeight" placeholder="in meter">
+      <p>Mark's BMI: <span id="markTotal"></span></p>
+      <br>
+      <p>Input John's Mass and Height</p>
+      <input type="text" name="johnMass" id="johnMass" placeholder="in kilogram">
+      <input type="text" name="johnHeight" id="johnHeight" placeholder="in meter">
+      <p>John's BMI: <span id="johnTotal"></span></p>
+      <br>
+      <button style="margin-top: 30px" type="button" onclick="compute()" name="button">Compute</button>
+      <p>Is Mark has a higher BMI than John? <span style="font-weight:bold" id="boolean"> </span></p>
+    </form>
+
+  <script type="text/javascript" src="BMI_project.js"></script>
+  </body>
+</html>
