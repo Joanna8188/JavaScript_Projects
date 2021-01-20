@@ -24,8 +24,22 @@ let currentScore, activePlayer, winScore;
 const score = [0, 0];
 let winGame = false;
 
+// Sound
+const startgame = './sound/startgame.wav';
+const rolldice = './sound/rolldice.wav';
+const holdsound = './sound/holdsound.wav';
+const enterScore = './sound/enterscore.wav';
+const gameover = './sound/gameover.wav';
+const rollone = './sound/number1roll.wav';
+
+function playAudio(audio) {
+  const soundEffect = new Audio(audio);
+  soundEffect.play();
+}
+
 // start up function back to zero and initial style
 function startUp() {
+  playAudio(startgame);
   winGame = false;
   score[0] = 0;
   score[1] = 0;
@@ -52,6 +66,7 @@ startUp();
 
 // Start next player turn
 function nextPlayer() {
+  playAudio(rollone);
   currentScore = 0;
   document.getElementById(
     `current--${activePlayer}`
@@ -63,6 +78,7 @@ function nextPlayer() {
 
 // Roll function
 btnRoll.addEventListener('click', function () {
+  playAudio(rolldice);
   if (!winGame) {
     // Generate a random dice value
     const dice = Math.trunc(Math.random() * 6) + 1;
@@ -87,6 +103,7 @@ btnRoll.addEventListener('click', function () {
 
 // Save Current Score
 btnHold.addEventListener('click', function () {
+  playAudio(holdsound);
   // disable button using boolean variable
   if (!winGame) {
     // Add current score to main score
@@ -104,11 +121,13 @@ btnHold.addEventListener('click', function () {
 
 // Restart Game
 btnNew.addEventListener('click', function () {
+  playAudio(startgame);
   startUp();
 });
 
 // Get input value
 btnInput.addEventListener('click', function () {
+  playAudio(enterScore);
   winScore = Number(inputNumber.value);
   btnInput.classList.add('hidden');
 });
@@ -116,6 +135,7 @@ btnInput.addEventListener('click', function () {
 // Game Over
 function gameOver(activePlayer) {
   winGame = true;
+  playAudio(gameover);
 
   // show gray background div with z-index
   divWinGame.classList.remove('hidden');
