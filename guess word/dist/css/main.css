@@ -1,0 +1,223 @@
+@media (min-width: 400px) {
+  .container {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.2rem;
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#e307f7), color-stop(#f120ab), color-stop(#ff0055), to(white));
+  background-image: linear-gradient(to bottom right, #e307f7, #f120ab, #ff0055, white);
+  color: #133c42;
+}
+
+.top {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: flex-start;
+}
+
+h1 {
+  margin: 10px;
+  padding-top: 10px;
+}
+
+h3 {
+  margin-right: 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.score {
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+button {
+  padding: 5px;
+}
+
+.container {
+  border: 1px solid #15464e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 80%;
+  height: 75vh;
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin: 0 auto;
+}
+
+.startBtn {
+  position: relative;
+  top: -40px;
+  margin: 0 auto;
+  width: 100px;
+  height: 30px;
+  color: #133c42;
+  border: none;
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#66c0db));
+  background-image: linear-gradient(#66c0db);
+  -webkit-box-shadow: 0px 2px 0px #66c0db;
+          box-shadow: 0px 2px 0px #66c0db;
+}
+
+#guess-word-box {
+  position: relative;
+  margin: 0 auto;
+  top: -25px;
+  height: 3em;
+  width: 90%;
+  text-align: center;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.letterBox {
+  text-align: center;
+  width: 60px;
+  height: 90%;
+  padding-top: 5px;
+  margin-left: 10px;
+  font-size: 2.8rem;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#e307f7), color-stop(#f120ab), to(#ff0055));
+  background-image: linear-gradient(to bottom right, #e307f7, #f120ab, #ff0055);
+}
+
+.generateBtn {
+  color: #133c42;
+  position: relative;
+  width: 150px;
+  height: 50px;
+  top: -2px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#66c0db));
+  background-image: linear-gradient(#66c0db);
+  -webkit-box-shadow: 0px 2px 0px #66c0db;
+          box-shadow: 0px 2px 0px #66c0db;
+}
+
+.startBtn,
+.generateBtn:active {
+  -webkit-box-shadow: 0px 3px 2px #66c0db;
+          box-shadow: 0px 3px 2px #66c0db;
+  background: #abd8e6;
+}
+
+.startBtn,
+.generateBtn:focus {
+  outline: none;
+}
+
+.startBtn,
+.generateBtn:hover {
+  cursor: pointer;
+  background: #abd8e6;
+}
+
+.press-letter-box {
+  position: relative;
+  width: 10%;
+  height: 40px;
+  margin: 0 auto;
+  display: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 20px;
+  padding: 5px;
+  text-align: center;
+  background: #66c0db;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+.press-letter {
+  position: relative;
+  width: 50px;
+  height: 35px;
+  font-size: 2rem;
+  padding-bottom: 2px;
+}
+
+#input-letter-grid {
+  position: relative;
+  margin: 0 auto;
+  top: 8%;
+  width: 90%;
+  height: 50%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+}
+
+#input-letter-grid:hover {
+  cursor: pointer;
+}
+
+.box {
+  margin: 5px;
+  padding: 2px;
+  text-align: center;
+  font-size: 1.5rem;
+  width: 88%;
+  height: 1.6em;
+  margin: 0 auto;
+  border: 2px solid #45daf5;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 1px 0px #66c0db;
+          box-shadow: 0px 1px 0px #66c0db;
+  background: #66c0db;
+}
+
+.box:hover {
+  background: #abd8e6;
+}
+
+.light {
+  background: #abd8e6;
+  -webkit-box-shadow: 2px 2px 1px #66c0db;
+          box-shadow: 2px 2px 1px #66c0db;
+}
+/*# sourceMappingURL=main.css.map */

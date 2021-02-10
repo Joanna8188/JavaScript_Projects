@@ -1,0 +1,197 @@
+@import 'media';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.2rem;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(227, 7, 247),
+    rgb(241, 32, 171),
+    rgb(255, 0, 85),
+    white
+  );
+  color: rgb(19, 60, 66);
+}
+
+.top {
+  position: relative;
+  margin: 0 auto;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: flex-start;
+}
+
+h2 {
+  margin: 10px;
+  padding-top: 10px;
+}
+
+h3 {
+  margin-right: 10%;
+  align-items: center;
+}
+
+.score {
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+button {
+  padding: 5px;
+}
+
+.container {
+  border: 1px solid rgb(21, 70, 78);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 80%;
+  height: 75vh;
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin: 0 auto;
+}
+
+.startBtn {
+  position: relative;
+  top: -10px;
+  margin: 0 auto;
+  width: -30px;
+  height: 30px;
+  color: rgb(19, 60, 66);
+  border: none;
+  border-radius: 10px;
+  background-image: linear-gradient(rgb(102, 192, 219));
+  box-shadow: 0px 2px 0px rgb(102, 192, 219);
+}
+
+#guess-word-box {
+  position: relative;
+  //   border: 1px solid black;
+  margin: 0 auto;
+  top: -20px;
+  height: 3em;
+  width: 90%;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.letterBox {
+  text-align: center;
+  width: 60px;
+  height: 90%;
+  padding-top: 5px;
+  margin-left: 10px;
+  //   border: 1px solid black;
+  font-size: 2.8rem;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(227, 7, 247),
+    rgb(241, 32, 171),
+    rgb(255, 0, 85)
+  );
+}
+
+.generateBtn {
+  color: rgb(19, 60, 66);
+  position: relative;
+  width: 150px;
+  height: 50px;
+  top: -2px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 10px;
+  background-image: linear-gradient(rgb(102, 192, 219));
+  box-shadow: 0px 2px 0px rgb(102, 192, 219);
+}
+
+.startBtn,
+.generateBtn:active {
+  box-shadow: 0px 3px 2px rgb(102, 192, 219);
+  background: rgb(171, 216, 230);
+}
+
+.startBtn,
+.generateBtn:focus {
+  outline: none;
+}
+
+.startBtn,
+.generateBtn:hover {
+  cursor: pointer;
+  background: rgb(171, 216, 230);
+}
+
+.press-letter-box {
+  position: relative;
+  //   border: 1px solid white;
+  width: 10%;
+  height: 40px;
+  margin: 0 auto;
+  display: hidden;
+  justify-content: center;
+  top: 20px;
+  padding: 5px;
+  text-align: center;
+  background: rgb(102, 192, 219);
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+.press-letter {
+  position: relative;
+  width: 50px;
+  height: 35px;
+  font-size: 2rem;
+  padding-bottom: 2px;
+}
+
+#input-letter-grid {
+  //   border: 1px solid white;
+  position: relative;
+  margin: 0 auto;
+  top: 8%;
+  width: 90%;
+  height: 50%;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+}
+
+#input-letter-grid:hover {
+  cursor: pointer;
+}
+
+.box {
+  margin: 5px;
+  padding: 2px;
+  text-align: center;
+  font-size: 1.5rem;
+  width: 88%;
+  height: 1.6em;
+  margin: 0 auto;
+  border: 2px solid rgb(69, 218, 245);
+  border-radius: 5px;
+  box-shadow: 0px 1px 0px rgb(102, 192, 219);
+  background: rgb(102, 192, 219);
+}
+
+.box:hover {
+  background: rgb(171, 216, 230);
+}
+
+.light {
+  background: rgb(171, 216, 230);
+  box-shadow: 2px 2px 1px rgb(102, 192, 219);
+}
