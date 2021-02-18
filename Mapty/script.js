@@ -8,8 +8,6 @@ class Workout {
   clicks = 0;
 
   constructor(coords, duration, distance) {
-    //this.date = ...
-    //this.id = ...
     this.coords = coords;
     this.duration = duration; // in min
     this.distance = distance; // in km
@@ -24,11 +22,6 @@ class Workout {
       months[this.date.getMonth()]
     } ${this.date.getDate()}`;
   }
-
-  // an example to show that when an object is converted to string then converted back to object it will loss all the inherited methods from and will only have objects built in methods
-  click() {
-    this.clicks++;
-  }
 }
 
 // The extends keyword is used in class declarations or class expressions to create a class that is a child of another class.
@@ -42,7 +35,6 @@ class Running extends Workout {
     this._setDescription();
   }
 
-  // method inside running class that can be access when the running type is selectd
   calcPace() {
     // min/km
     this.pace = this.duration / this.distance;
@@ -79,7 +71,6 @@ const inputElevation = document.querySelector('.form__input--elevation');
 
 // main app
 class App {
-  // # - created private variables inside an object
   #map;
   #mapEvent;
   #workouts = [];
@@ -100,10 +91,8 @@ class App {
 
   _getPosition() {
     // Get geolocation API
-    //Navigator.geolocation read-only property returns a Geolocation object that gives Web content access to the location of the device. This allows a Web site or app to offer customized results based on the user's location.
     if (navigator.geolocation)
       navigator.geolocation.getCurrentPosition(
-        // .bind() is used to refer the 'this' keyword to the App class
         this._loadMap.bind(this),
         function () {
           alert('Could not get your position');
@@ -152,7 +141,6 @@ class App {
     setTimeout(() => (form.style.display = 'grid'), 1000);
   }
 
-  // will hide elevation or cadence div based on select form of running and cycling
   _toggleElevationField() {
     inputElevation.closest('.form__row').classList.toggle('form__row--hidden');
     inputCadence.closest('.form__row').classList.toggle('form__row--hidden');
@@ -185,9 +173,6 @@ class App {
 
       // check if data is valid
       if (
-        // !Number.isFinite(distance) ||
-        // !Number.isFinite(duration) ||
-        // !Number.isFinite(cadence)
         // will check if the return value for data validation is true. if false will return alert
         !validInputs(distance, duration, cadence) ||
         !allPositive(distance, duration, cadence)
@@ -229,9 +214,9 @@ class App {
     this._setLocalStorage();
   }
 
-  // will render marker from leaflet api. will be called inside _newWorkout method
+  // will render marker from leaflet api. 
   _renderWorkoutMarker(workout) {
-    // will put marker based on workout coords. all used method are based on leaflet api
+    // will put marker based on workout coords.
     L.marker(workout.coords)
       .addTo(this.#map)
       .bindPopup(
@@ -325,10 +310,6 @@ class App {
         duration: 1,
       },
     });
-
-    // using the publick interface
-    // an example to show that when an object is converted to string then converted back to object it will loss all the inherited methods from and will only have objects built in methods
-    // workout.click();
   }
 
   // set the local storage and save data that is being converted to string
