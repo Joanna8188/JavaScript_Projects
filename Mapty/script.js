@@ -1,6 +1,6 @@
 'use strict';
 
-// main work out class that accept common data from for running and cycling
+// main work out class that accept common data for running and cycling
 class Workout {
   date = new Date();
   // to create unique ids for each workout
