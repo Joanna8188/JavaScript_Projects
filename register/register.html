@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="register.css"></link>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Registration Form Demo</h1>
+        <form action="/" method="post" id="registrationForm">
+        <input type="text" name="username" class="box" placeholder="Username">
+        <br>
+        <input type="text" name="password" id="password" class="box" placeholder="Password">
+        <br>
+        <button style="margin-top: 30px" type="button" id="reg_btn" name="register" class="btn--show-modal">Register</button>
+        </form>
+    </div>
+
+    <div class="modal hidden">
+      <button class="btn--close-modal" onclick="myFunction()">&times;</button>
+      <h2 class="modal__header">
+        Registered!
+      </h2>
+    </div>
+    <div class="overlay hidden"></div>
+
+  <script type="text/javascript" src="register.js"></script>
+  </body>
+</html>
